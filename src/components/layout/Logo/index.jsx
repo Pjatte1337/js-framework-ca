@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import StoreTown from "../../../assets/logo.png";
+import StoreTown from "../../../assets/logo1.png";
 
 export default function Logo() {
   return (
@@ -7,4 +7,4 @@ export default function Logo() {
       <img src={StoreTown} alt="StoreTown" />
     </Link>
   );
-}
+} 
