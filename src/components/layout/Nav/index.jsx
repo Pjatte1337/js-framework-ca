@@ -23,7 +23,7 @@ export default function Nav() {
         <span className="material-symbols-rounded">menu</span>
       </button>
       <StyledNavBar isVisible={isVisible}>
-        <ul>
+        <ul >
           <li>
             <NavLink to="/">Home</NavLink>
           </li>

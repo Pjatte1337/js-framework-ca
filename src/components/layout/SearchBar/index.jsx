@@ -3,6 +3,8 @@ import { StyledSearchBar } from "./styles";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useProductsStore } from "../../../utils/stateManagement";
 import { shallow } from "zustand/shallow";
+import 'material-symbols';
+
 
 export default function SearchBar() {
   const [userInput, setUserInput] = useState("");
@@ -29,7 +31,6 @@ export default function SearchBar() {
     const query = event.target.value.toLowerCase();
     setUserInput(query);
 
-    //delay suggestions to display more accurate results
     if (query.length > 2) {
       const filteredSuggestions = availableProducts.filter((product) =>
         product.title.toLowerCase().includes(query)
