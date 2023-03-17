@@ -13,6 +13,7 @@ const myTheme = {
   border: {
     thickness: "1px",
     type: "solid",
+
   },
 };
 
