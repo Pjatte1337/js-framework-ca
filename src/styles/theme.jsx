@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 
-const elegant = {
+const myTheme = {
   color: {
     highlight: "#4f4f4f",
     support: "#e0e2e2",
@@ -17,7 +17,7 @@ const elegant = {
 };
 
 export const Theme = ({ children }) => (
-  <ThemeProvider theme={elegant}>{children}</ThemeProvider>
+  <ThemeProvider theme={myTheme}>{children}</ThemeProvider>
 );
 
 export default Theme;

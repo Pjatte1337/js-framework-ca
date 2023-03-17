@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledContactForm = styled.form`
+
   width: 600px;
   margin-left: 1rem;
   legend {

@@ -4,10 +4,9 @@ export const StyledHeader = styled.header`
   display: grid;
   grid-template-columns: 2fr 1fr 4rem;
   padding: 1rem;
-  border: ${({ theme }) =>
-    `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
   img {
-    padding-bottom: 1rem;
+    height: 200px;
+    width: 400px;
   }
   .menu {
     display: none;
@@ -71,7 +70,6 @@ export const StyledHeader = styled.header`
       grid-column-end: 3;
       width: 2.5rem;
       border: none;
-      background-color: transparent;
       color: ${({ theme }) => theme.color.highlight};
       cursor: pointer;
     }

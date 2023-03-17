@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const StyledSearchBar = styled.div`
-  border-left: ${({ theme }) =>
-    `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
-  border-right: ${({ theme }) =>
-    `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
   display: flex;
   flex-direction: column;
   justify-content: center;
