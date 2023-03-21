@@ -1,4 +1,5 @@
 import { StyledCheckoutForm } from "./styles";
+import PrimaryButton from "../PrimaryButton";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import * as yup from "yup";
@@ -167,6 +168,67 @@ export default function CheckoutForm() {
           placeholder="Phone number"
         ></input>
         <p className="error-message">{errors.phone?.message}</p>
+        <div className="payment">
+        <legend>payment information</legend>
+
+        <label htmlFor="cardName">Cardholder's name</label>
+        <input
+          {...register("cardName", {
+            required: true,
+            minLength: 3,
+          })}
+          name="cardName"
+          placeholder="Cardholder's name"
+        ></input>
+        <p className="error-message">{errors.cardName?.message}</p>
+
+        <div className="small-field">
+          <div>
+            <label htmlFor="month">Expiry month (MM)</label>
+            <input
+              {...register("month", {
+                required: true,
+                minLength: 2,
+                maxLength: 2,
+              })}
+              name="month"
+              placeholder="Expiry month"
+            ></input>
+            <p className="error-message">{errors.month?.message}</p>
+          </div>
+
+          <div>
+            <label htmlFor="year">Expiry year (YY)</label>
+            <input
+              {...register("year", {
+                required: true,
+                minLength: 2,
+                maxLength: 2,
+              })}
+              name="year"
+              placeholder="Expiry year"
+            ></input>
+            <p className="error-message">{errors.year?.message}</p>
+          </div>
+        </div>
+
+        <label htmlFor="cvv">CVV</label>
+        <input
+          {...register("cvv", {
+            required: true,
+            minLength: 3,
+            maxLength: 3,
+          })}
+          name="cvv"
+          placeholder="CVV"
+          className="cvv"
+        ></input>
+        <p className="error-message">{errors.cvv?.message}</p>
+
+        <div className="button-container">
+          <PrimaryButton text={"Place order"} />
+        </div>
+      </div>
       </fieldset>
     </StyledCheckoutForm>
   );
