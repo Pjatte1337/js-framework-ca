@@ -1,20 +1,25 @@
 import styled from "styled-components";
 
 export const StyledCheckoutForm = styled.form`
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  border: ${({ theme }) =>
+    `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
+  width: 60rem;
+  padding: 1rem;
+
+
   margin-left: 1rem;
-  legend {
+  h2 {
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
   }
   input,
   select {
     display: block;
     width: 100%;
     margin-top: 0.5rem;
-    border: ${({ theme }) =>
-      `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
   }
   input,
   select {
@@ -35,7 +40,7 @@ export const StyledCheckoutForm = styled.form`
     max-width: 75px;
   }
   .error-message {
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin: 0 0 1.5rem;
     color: red;
   }

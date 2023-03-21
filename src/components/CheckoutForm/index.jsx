@@ -82,8 +82,8 @@ export default function CheckoutForm() {
 
   return (
     <StyledCheckoutForm onSubmit={handleSubmit(handleSubmission)}>
-      <fieldset>
-        <legend>Shipping information</legend>
+      <div className="form">
+        <h2>Shipping information</h2>
         <label htmlFor="fullName">Full name</label>
         <input
           {...register("fullName", {
@@ -169,7 +169,7 @@ export default function CheckoutForm() {
         ></input>
         <p className="error-message">{errors.phone?.message}</p>
         <div className="payment">
-        <legend>payment information</legend>
+        <h2>payment information</h2>
 
         <label htmlFor="cardName">Cardholder's name</label>
         <input
@@ -229,7 +229,7 @@ export default function CheckoutForm() {
           <PrimaryButton text={"Place order"} />
         </div>
       </div>
-      </fieldset>
+      </div>
     </StyledCheckoutForm>
   );
 }
