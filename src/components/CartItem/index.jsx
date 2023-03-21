@@ -38,7 +38,7 @@ export default function CartItem({ title, count, price, id, imageUrl }) {
       </div>
       <div>
         <button onClick={() => clearCount(id)}>
-          <span className="material-symbols-rounded">deleter</span>
+          <span className="material-symbols-rounded">X</span>
         </button>
       </div>
     </StyledCartItem>
