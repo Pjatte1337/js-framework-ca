@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useProductsStore } from "../../../utils/create";
 import { shallow } from "zustand/shallow";
+import { StyledCart } from "./styles";
 
 export default function Cart() {
   const { availableProducts } = useProductsStore(
@@ -24,11 +25,13 @@ export default function Cart() {
   }
 
   return (
-    <div className="cart-container">
-      <Link to="/src/pages/Cart" className="cart-wrapper">
-        <span className="material-symbols-rounded">shopping_bag</span>
-        <span>{printTotal()}</span>
-      </Link>
-    </div>
+    <StyledCart>
+      <div className="cart-container">
+        <Link to="/src/pages/Cart" className="cart-wrapper">
+          <span className="material-symbols-rounded">shopping_bag</span>
+          <span>{printTotal()}</span>
+        </Link>
+      </div>
+    </StyledCart>
   );
 }

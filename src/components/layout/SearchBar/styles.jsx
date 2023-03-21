@@ -11,6 +11,9 @@ export const StyledSearchBar = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.color.highlight};
   }
+  .material-symbols-rounded{
+    color:yellow;
+  }
   ul {
     list-style-type: none;
     position: absolute;
