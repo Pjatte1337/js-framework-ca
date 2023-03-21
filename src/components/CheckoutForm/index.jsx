@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useProductsStore } from "../../utils/stateManagement";
+import { useProductsStore } from "../../utils/create";
 import { shallow } from "zustand/shallow";
 
 const schema = yup

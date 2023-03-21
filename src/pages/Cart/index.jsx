@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useProductsStore } from "../../utils/stateManagement";
+import { useProductsStore } from "../../utils/create";
 import { shallow } from "zustand/shallow";
 import { StyledCartPage } from "./styles";
 import CartItem from "../../components/CartItem";

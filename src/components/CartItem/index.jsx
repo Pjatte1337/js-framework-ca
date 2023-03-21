@@ -1,4 +1,4 @@
-import { useProductsStore } from "../../utils/stateManagement";
+import { useProductsStore } from "../../utils/create";
 import { shallow } from "zustand/shallow";
 import { StyledCartItem } from "./styles";
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useProductsStore } from "./utils/stateManagement";
+import { useProductsStore } from "./utils/create";
 import { shallow } from "zustand/shallow";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";

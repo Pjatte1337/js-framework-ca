@@ -1,7 +1,7 @@
 import { StyledProductCard } from "./styles";
 import PrimaryButton from "../PrimaryButton";
 import { Link, useLocation, useParams } from "react-router-dom";
-import { useProductsStore } from "../../utils/stateManagement";
+import { useProductsStore } from "../../utils/create";
 import { shallow } from "zustand/shallow";
 
 export default function ProductCard({

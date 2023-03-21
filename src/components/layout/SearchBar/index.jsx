@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StyledSearchBar } from "./styles";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useProductsStore } from "../../../utils/stateManagement";
+import { useProductsStore } from "../../../utils/create";
 import { shallow } from "zustand/shallow";
 import 'material-symbols';
 
