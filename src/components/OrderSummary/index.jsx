@@ -1,6 +1,6 @@
 import { StyledOrderSummary } from "./styles";
 import { Link } from "react-router-dom";
-import SecondaryButton from "../SecondaryButton";
+import PrimaryButton from "../PrimaryButton";
 
 export default function OrderSummary({
   calcSubtotal,
@@ -28,7 +28,7 @@ export default function OrderSummary({
         <p className="total">{calcTotal()} NOK</p>
       </div>
       <Link to={"/src/pages/Checkout"}>Checkout</Link>
-      <SecondaryButton onClick={() => clearCart()} text={"Clear cart"} />
+      <PrimaryButton onClick={() => clearCart()} text={"Clear cart"} />
     </StyledOrderSummary>
   );
 }
