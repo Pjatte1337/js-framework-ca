@@ -4,7 +4,7 @@ export const StyledCartItem = styled.div`
   display: flex;
   justify-content: space-between;
   border: ${({ theme }) =>
-    `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
+    `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
   padding: 1rem;
   margin: 2rem 0;
   .product-info {
@@ -30,14 +30,14 @@ export const StyledCartItem = styled.div`
   button {
     display: flex;
     border: none;
-    background-color: ${({ theme }) => theme.color.support};
-    color: ${({ theme }) => theme.color.highlight};
+    background-color: ${({ theme }) => theme.color.highlight};
+    color: ${({ theme }) => theme.color.neutral};
     border-radius: 4px;
     cursor: pointer;
     &:hover {
       opacity: 0.9;
-      background-color: ${({ theme }) => theme.color.highlight};
-      color: ${({ theme }) => theme.color.neutral};
+      background-color: ${({ theme }) => theme.color.neutral};
+      color: ${({ theme }) => theme.color.hover};
     }
   }
 `;
