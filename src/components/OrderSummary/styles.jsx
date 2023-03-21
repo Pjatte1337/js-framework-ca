@@ -31,7 +31,10 @@ export const StyledOrderSummary = styled.div`
     padding: 0.5rem 0;
     text-align: center;
     &:hover {
-      opacity: 0.9;
+      color: ${({ theme }) => theme.color.hover};
+      background-color: ${({ theme }) => theme.color.neutral};
+      border: ${({ theme }) =>
+      `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
     }
   }
   @media (max-width: ${({ theme }) => theme.break.medium}) {

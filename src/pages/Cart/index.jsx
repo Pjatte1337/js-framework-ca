@@ -75,8 +75,8 @@ export default function Cart() {
         </>
       ) : (
         <div>
-          <div>There are no items in the cart</div>
-          <Link to={`/`}>Go shopping</Link>
+          <div>shopping cart empty <Link to={`/`}>Go shopping</Link></div>
+          
         </div>
       )}
     </StyledCartPage>

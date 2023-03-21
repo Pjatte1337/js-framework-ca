@@ -10,7 +10,7 @@ export default function Home({ products }) {
   return (
     <>
       <StyledPage>
-        <h1>All products</h1>
+        <h1>All Products</h1>
         {products.map((product) => {
           return (
             <ProductCard

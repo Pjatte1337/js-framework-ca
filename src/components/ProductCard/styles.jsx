@@ -5,11 +5,12 @@ export const StyledProductCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border: ${({ theme }) =>
-    `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
+    `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
   width: 17rem;
   padding: 1rem;
   img {
     max-width: 100%;
+    height: 400px;
     align-self: center;
   }
   .product-data {
@@ -33,6 +34,7 @@ export const StyledProductCard = styled.div`
     color: ${({ theme }) => theme.color.neutral};
     padding: 0.3rem;
     border-radius: 4px;
+    font-weight:bold;
   }
   a {
     text-decoration: none;
@@ -42,10 +44,13 @@ export const StyledProductCard = styled.div`
     padding: 0.5rem 0;
     text-align: center;
     &:hover {
-      opacity: 0.9;
+      color: ${({ theme }) => theme.color.hover};
+      background-color: ${({ theme }) => theme.color.neutral};
+      border: ${({ theme }) =>
+      `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
     }
   }
-  //set flex-direction to row-reverse when card is displayed on product page
+ 
   ${({ location }) =>
     location.includes("/src/pages/Product") &&
     `
@@ -57,7 +62,7 @@ export const StyledProductCard = styled.div`
      max-width: 50%;
      }
   `}
-  //reset flex-direction and img size on small screens
+
   @media (max-width: ${({ theme }) => theme.break.small}) {
     flex-direction: column;
     img,

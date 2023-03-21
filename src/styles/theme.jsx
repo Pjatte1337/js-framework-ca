@@ -2,9 +2,10 @@ import { ThemeProvider } from "styled-components";
 
 const myTheme = {
   color: {
-    highlight: "#4f4f4f",
+    highlight: "#ffff00",
     support: "#e0e2e2",
-    neutral: "#fff",
+    neutral: "#000000",
+    hover: "#ffff00", 
   },
   break: {
     medium: "900px",

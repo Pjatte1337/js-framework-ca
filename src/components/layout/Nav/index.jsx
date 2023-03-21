@@ -28,10 +28,10 @@ export default function Nav() {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/src/pages/Electronics">Electronics</NavLink>
+            <NavLink to="/src/pages/Beauty">Beauty</NavLink>
           </li>
           <li>
-            <NavLink to="/src/pages/Beauty">Beauty</NavLink>
+            <NavLink to="/src/pages/Electronics">Electronics</NavLink>
           </li>
           <li>
             <NavLink to="/src/pages/Fashion">Fashion</NavLink>

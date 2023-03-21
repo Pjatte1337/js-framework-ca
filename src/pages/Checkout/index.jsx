@@ -9,7 +9,7 @@ export default function Checkout() {
 
   return (
     <StyledCheckoutPage>
-      <h1>Check out</h1>
+      <h1>Check Out</h1>
       <CheckoutForm />
     </StyledCheckoutPage>
   );

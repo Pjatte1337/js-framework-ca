@@ -11,6 +11,9 @@ export const StyledPrimaryButton = styled.button`
   font-size: 1.025rem;
   margin: 1rem 0;
   &:hover {
-    opacity: 0.9;
+    color: ${({ theme }) => theme.color.hover};
+    background-color: ${({ theme }) => theme.color.neutral};
+    border: ${({ theme }) =>
+    `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
   }
 `;

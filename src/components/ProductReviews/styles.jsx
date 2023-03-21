@@ -1,17 +1,13 @@
 import styled from "styled-components";
 
 export const StyledProductReviews = styled.div`
-  width: 80%;
-  border: ${({ theme }) =>
-    `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
+  width: 70%;
   h3 {
     margin: 1rem;
   }
   .rating-container {
     display: flex;
     align-items: baseline;
-    border-bottom: ${({ theme }) =>
-      `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
   }
   .reviews-container {
     margin: 1rem;
