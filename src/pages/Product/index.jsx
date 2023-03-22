@@ -4,7 +4,7 @@ import ProductCard from "../../components/ProductCard";
 import ProductReviews from "../../components/ProductReviews";
 import { useParams } from "react-router-dom";
 import { url } from "../../utils/constants";
-import Feedback from "../../components/Feedback";
+import message from "../../components/message";
 import Loader from "../../components/Loader";
 
 export default function Product() {
@@ -41,7 +41,7 @@ export default function Product() {
   }
 
   if (isError) {
-    return <Feedback title={"ops..."} />;
+    return <message title={"ops..."} />;
   }
 
   return (

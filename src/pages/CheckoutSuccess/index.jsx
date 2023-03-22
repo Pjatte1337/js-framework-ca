@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { StyledPage } from "../pageStyles";
-import Confirmation from "../../components/confirmation";
+import Confirmation from "../../components/message";
 
 export default function CheckoutSuccess() {
   useEffect(() => {

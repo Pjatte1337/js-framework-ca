@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { StyledPage } from "../pageStyles";
-import Feedback from "../../components/Feedback";
+import message from "../../components/message";
 
 export default function NotFound() {
   useEffect(() => {
@@ -9,7 +9,7 @@ export default function NotFound() {
 
   return (
     <StyledPage>
-      <Feedback title={"we couldn't find the page"} />
+      <message title={"we couldn't find the page"} />
     </StyledPage>
   );
 }

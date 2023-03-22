@@ -14,7 +14,7 @@ import SearchResults from "./pages/SearchResults";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
-import Feedback from "./components/Feedback";
+import Confirmation from "./components/message";
 import Loader from "./components/Loader";
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
   }
 
   if (error) {
-    return <Feedback title={"An error occurred"} message={error} />;
+    return <Confirmation title={"An error occurred"} message={error} />;
   }
 
   return (
