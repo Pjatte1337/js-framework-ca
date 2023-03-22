@@ -7,8 +7,6 @@ export const StyledCheckoutForm = styled.form`
     `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
   width: 60rem;
   padding: 1rem;
-
-
   margin-left: 1rem;
   h2 {
     margin-bottom: 2rem;

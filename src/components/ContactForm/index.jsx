@@ -46,8 +46,8 @@ export default function ContactForm() {
 
   return (
     <StyledContactForm onSubmit={handleSubmit(handleSubmission)}>
-      <fieldset>
-        <legend>All fields are required</legend>
+      <div className="form">
+        <h2>Fill in</h2>
         <label htmlFor="fullName">Full name</label>
         <input
           {...register("fullName", {
@@ -95,7 +95,7 @@ export default function ContactForm() {
         <div className="button-container">
           <PrimaryButton text={"Submit"} />
         </div>
-      </fieldset>
+      </div>
     </StyledContactForm>
   );
 }
