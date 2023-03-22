@@ -44,7 +44,7 @@ export const StyledHeader = styled.header`
     padding: 1rem 0;
     img {
       height:200px;
-      width:300px;
+      width:320px;
     }
     .cart-container {
       position: relative ;
