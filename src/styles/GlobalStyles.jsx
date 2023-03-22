@@ -13,7 +13,7 @@ box-sizing: border-box;
 body {
     background-color: black;
     margin: 0;
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
     color: ${({ theme }) => theme.color.highlight};
 }
 ul {
