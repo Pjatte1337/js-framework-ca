@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 box-sizing: border-box;
 }
 body {
-    background-color: black;
+    background-color: grey;
     margin: 0;
     font-family: 'Droid Sans', sans-serif;
     color: ${({ theme }) => theme.color.highlight};
