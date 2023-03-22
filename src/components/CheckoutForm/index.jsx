@@ -1,11 +1,18 @@
-import { StyledCheckoutForm } from "./styles";
-import PrimaryButton from "../PrimaryButton";
+// Import necessary dependencies
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useProductsStore } from "../../utils/create";
 import { shallow } from "zustand/shallow";
+
+// Import styles
+import { StyledCheckoutForm } from "./styles";
+
+// Import components
+import PrimaryButton from "../PrimaryButton";
+
+// Import utils
+import { useProductsStore } from "../../utils/create";
 
 const schema = yup
   .object({

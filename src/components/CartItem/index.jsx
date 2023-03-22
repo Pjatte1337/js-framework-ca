@@ -1,8 +1,11 @@
-import { useProductsStore } from "../../utils/create";
+// Import necessary dependencies
 import { shallow } from "zustand/shallow";
+import { useProductsStore } from "../../utils/create";
 import { StyledCartItem } from "./styles";
 
+// Define the CartItem component
 export default function CartItem({ title, count, price, id, imageUrl }) {
+  // Retrieve the necessary store methods from the useProductsStore hook
   const { addOne, subtractOne, clearCount } = useProductsStore(
     (state) => ({
       addOne: state.addOne,
@@ -12,10 +15,12 @@ export default function CartItem({ title, count, price, id, imageUrl }) {
     shallow
   );
 
+  // Define a function for calculating the subtotal
   function calcSubtotal(price, count) {
     return (price * count).toFixed(2);
   }
 
+  // Render the CartItem component
   return (
     <StyledCartItem>
       <div className="product-info">
