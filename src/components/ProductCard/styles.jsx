@@ -28,6 +28,7 @@ export const StyledProductCard = styled.div`
   }
   .old-price {
     text-decoration: line-through;
+    color: ${({ theme }) => theme.color.support};
   }
   .discount {
     background-color: red;

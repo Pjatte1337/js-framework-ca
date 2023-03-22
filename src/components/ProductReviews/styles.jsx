@@ -21,6 +21,7 @@ export const StyledProductReviews = styled.div`
     p {
       margin-top: 0;
       flex: 100%;
+      color: ${({ theme }) => theme.color.support};
     }
   }
   @media (max-width: ${({ theme }) => theme.break.small}) {

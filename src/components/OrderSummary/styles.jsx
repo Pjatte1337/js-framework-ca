@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledOrderSummary = styled.div`
   border: ${({ theme }) =>
-    `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
+    `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -15,6 +15,7 @@ export const StyledOrderSummary = styled.div`
   .price-summary {
     display: flex;
     justify-content: space-between;
+    color: ${({ theme }) => theme.color.support};
     p {
       margin: 0.5rem 0;
     }

@@ -17,7 +17,7 @@ export const StyledSearchBar = styled.div`
   ul {
     list-style-type: none;
     position: absolute;
-    top: 100%;
+    top: 57%;
     background-color: ${({ theme }) => theme.color.support};
     width: 100%;
   }
@@ -27,7 +27,8 @@ export const StyledSearchBar = styled.div`
       padding: 0.5rem 1rem;
       display: block;
       text-decoration: none;
-      color: ${({ theme }) => theme.color.highlight};
+      color: ${({ theme }) => theme.color.neutral};
+      background-color: ${({ theme }) => theme.color.support};
       &:hover {
         background-color: ${({ theme }) => theme.color.highlight};
         color: ${({ theme }) => theme.color.neutral};

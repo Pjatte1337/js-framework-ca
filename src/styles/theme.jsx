@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 const myTheme = {
   color: {
     highlight: "#ffff00",
-    support: "#e0e2e2",
+    support: "#ffffff",
     neutral: "#000000",
     hover: "#ffff00", 
   },
