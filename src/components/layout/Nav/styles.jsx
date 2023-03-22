@@ -15,6 +15,7 @@ export const StyledNavBar = styled.nav`
     transition: 0.5s;
     font-weight:bold;
     &:hover {
+      border-radius: 30px;
       background-color: ${({ theme }) => theme.color.hover};
       cursor: pointer;
       a {
@@ -29,6 +30,7 @@ export const StyledNavBar = styled.nav`
     }
   }
   .active {
+    border-radius: 30px;
     background-color: ${({ theme }) => theme.color.hover};
     color: ${({ theme }) => theme.color.neutral};
   }
