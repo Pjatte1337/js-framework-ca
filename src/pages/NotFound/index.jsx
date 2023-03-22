@@ -1,6 +1,10 @@
+// Importing react
 import { useEffect } from "react";
+
+// Importing components
 import { StyledPage } from "../pageStyles";
 import Message from "../../components/Message";
+
 
 export default function NotFound() {
   useEffect(() => {

@@ -52,7 +52,7 @@ export default function Product() {
         title={data.title}
         price={data.price}
         discountedPrice={data.discountedPrice}
-        description={data.description}
+        description={data.description} 
       />
       <ProductReviews rating={data.rating} reviews={data.reviews} />
     </StyledPage>
