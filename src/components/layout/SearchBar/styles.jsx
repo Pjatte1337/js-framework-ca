@@ -47,7 +47,6 @@ export const StyledSearchBar = styled.div`
     grid-row-end: 3;
     grid-column-end: 6;
     border-right: none;
-    border-top: ${({ theme }) =>
-      `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
+
   }
 `;

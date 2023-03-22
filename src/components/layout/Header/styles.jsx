@@ -4,10 +4,6 @@ export const StyledHeader = styled.header`
   display: grid;
   grid-template-columns: 2fr 1fr 4rem;
   padding: 1rem;
-  img {
-    height: 200px;
-    width: 400px;
-  }
   .menu {
     display: none;
   }
@@ -47,31 +43,24 @@ export const StyledHeader = styled.header`
     grid-template-columns: 1rem repeat(3, 1fr) 4rem 1rem;
     padding: 1rem 0;
     img {
-      max-width: 175px;
-      grid-row-start: 1;
-      grid-column-start: 2;
-      grid-row-end: 2;
-      grid-column-end: 5;
+      height:200px;
+      width:300px;
     }
     .cart-container {
-      grid-column: 2;
-      grid-row-start: 1;
-      grid-column-start: 5;
-      grid-row-end: 2;
-      grid-column-end: 6;
-      border-left: ${({ theme }) =>
-        `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
+      position: relative ;
+      top: 200px;
+      left: 0px;
     }
     .menu {
       display: block;
       grid-row-start: 2;
-      grid-column-start: 2;
+      grid-column-start: 1;
       grid-row-end: 3;
       grid-column-end: 3;
       width: 2.5rem;
       border: none;
       color: ${({ theme }) => theme.color.highlight};
+      background-color: ${({ theme }) => theme.color.neutral};
       cursor: pointer;
     }
-  }
 `;
