@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ProductCard from "../../components/ProductCard";
 import { StyledPage } from "../pageStyles";
 import { url } from "../../utils/constants";
-import message from "../../components/message";
+import Message from "../../components/Message";
 import Loader from "../../components/Loader";
 
 export default function SearchResults() {
@@ -41,7 +41,7 @@ export default function SearchResults() {
   }
 
   if (isError) {
-    return <message title={"An error occurred"} />;
+    return <Message title={"An error occurred"} />;
   }
 
   const query = data.filter((product) => {
