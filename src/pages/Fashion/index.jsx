@@ -1,7 +1,14 @@
+// Import necessary dependencies
 import React, { useEffect } from "react";
-import { StyledPage } from "../pageStyles";
+
+// Import components
 import ProductCard from "../../components/ProductCard";
+
+// Import utils
 import filterByTags from "../../utils/filter";
+
+// Import styles
+import { StyledPage } from "../pageStyles";
 
 export default function Fashion({ products }) {
   useEffect(() => {
@@ -14,19 +21,17 @@ export default function Fashion({ products }) {
   return (
     <StyledPage>
       <h1>Fashion</h1>
-      {fashion.map((item) => {
-        return (
-          <ProductCard
-            key={item.id}
-            id={item.id}
-            imageUrl={item.imageUrl}
-            title={item.title}
-            price={item.price}
-            discountedPrice={item.discountedPrice}
-            description={item.description}
-          />
-        );
-      })}
+      {fashion.map((item) => (
+        <ProductCard
+          key={item.id}
+          id={item.id}
+          imageUrl={item.imageUrl}
+          title={item.title}
+          price={item.price}
+          discountedPrice={item.discountedPrice}
+          description={item.description}
+        />
+      ))}
     </StyledPage>
   );
 }

@@ -1,20 +1,20 @@
+// Import necessary dependencies
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+
+// Import styles
 import { StyledNavBar } from "./styles";
 
 export default function Nav() {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
-
-  let location = useLocation();
   useEffect(() => {
     setIsVisible(false);
   }, [location]);
 
   function toggleMenu() {
-    setIsVisible((prevState) => {
-      return !prevState;
-    });
+    setIsVisible((prevState) => !prevState);
   }
 
   return (
@@ -23,7 +23,7 @@ export default function Nav() {
         <span className="material-symbols-rounded">menu</span>
       </button>
       <StyledNavBar isVisible={isVisible}>
-        <ul >
+        <ul>
           <li>
             <NavLink to="/">Home</NavLink>
           </li>

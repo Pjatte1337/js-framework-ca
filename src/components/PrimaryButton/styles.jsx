@@ -5,6 +5,7 @@ export const StyledPrimaryButton = styled.button`
   color: ${({ theme }) => theme.color.neutral};
   background-color: ${({ theme }) => theme.color.highlight};
   border: none;
+  font-weight: bold;
   cursor: pointer;
   padding: 0.5rem 0;
   text-align: center;

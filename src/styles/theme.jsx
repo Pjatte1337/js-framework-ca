@@ -1,3 +1,4 @@
+// Import necessary dependencies
 import { ThemeProvider } from "styled-components";
 
 const myTheme = {

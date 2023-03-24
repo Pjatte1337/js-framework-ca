@@ -1,5 +1,8 @@
+// Import styles
 import { StyledPrimaryButton } from "./styles";
 
-export default function PrimaryButton({ text, onClick }) {
+const PrimaryButton = ({ text, onClick }) => {
   return <StyledPrimaryButton onClick={onClick}>{text}</StyledPrimaryButton>;
-}
+  };
+  
+  export default PrimaryButton;

@@ -1,24 +1,20 @@
+// Importing styles
 import { StyledProductReviews } from "./styles";
 
 export default function ProductReviews({ rating, reviews }) {
-  let stars = [];
-  for (let i = 0; i < rating; i++) {
-    stars.push(
-      <span key={i} className="material-symbols-rounded">
-        star
-      </span>
-    );
-  }
+  const stars = Array.from({ length: rating }, (_, i) => (
+    <span key={i} className="material-symbols-rounded">
+      star
+    </span>
+  ));
 
-  const userReviews = reviews.map((review) => {
-    return (
-      <div key={review.id} className="reviews-container">
-        <h4>{review.username}</h4>
-        <span>{stars}</span>
-        <p>{review.description}</p>
-      </div>
-    );
-  });
+  const userReviews = reviews.map((review) => (
+    <div key={review.id} className="reviews-container">
+      <h4>{review.username}</h4>
+      <span>{stars}</span>
+      <p>{review.description}</p>
+    </div>
+  ));
 
   return (
     <StyledProductReviews>

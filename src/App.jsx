@@ -1,8 +1,16 @@
+// Import necessary dependencies
 import React, { useEffect } from "react";
-import { useProductsStore } from "./utils/create";
 import { shallow } from "zustand/shallow";
 import { Routes, Route } from "react-router-dom";
+
+// Import components
+import ReturnMessage from "./components/ReturnMessage";
+import Loader from "./components/Loader";
 import Layout from "./components/layout/Layout";
+
+// Import utils
+import { useProductsStore } from "./utils/create";
+
 import Home from "./pages/Home";
 import Electronics from "./pages/Electronics";
 import Beauty from "./pages/Beauty";
@@ -14,8 +22,6 @@ import SearchResults from "./pages/SearchResults";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
-import ReturnMessage from "./components/ReturnMessage";
-import Loader from "./components/Loader";
 
 function App() {
   const { availableProducts, fetchProducts, isLoading, error } =

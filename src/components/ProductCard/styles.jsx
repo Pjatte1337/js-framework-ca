@@ -1,3 +1,4 @@
+// Importing styles
 import styled from "styled-components";
 
 export const StyledProductCard = styled.div`
@@ -13,6 +14,7 @@ export const StyledProductCard = styled.div`
     height: 400px;
     align-self: center;
   }
+
   .product-data {
     display: flex;
     flex-direction: column;
@@ -39,6 +41,7 @@ export const StyledProductCard = styled.div`
   }
   a {
     text-decoration: none;
+    font-weight: bold;
     text-transform: uppercase;
     color: ${({ theme }) => theme.color.neutral};
     background-color: ${({ theme }) => theme.color.highlight};

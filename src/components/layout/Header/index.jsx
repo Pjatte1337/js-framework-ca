@@ -1,7 +1,10 @@
-import Nav from "../Nav";
+// Importing components
+import Logo from "../Logo";
 import SearchBar from "../SearchBar";
 import Cart from "../Cart";
-import Logo from "../Logo";
+import Nav from "../Nav";
+
+// Importing styles
 import { StyledHeader } from "./styles";
 
 export default function Header() {

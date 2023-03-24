@@ -1,13 +1,12 @@
-import { StyledOrderSummary } from "./styles";
+// Import necessary dependencies
 import { Link } from "react-router-dom";
-import PrimaryButton from "../PrimaryButton";
 
-export default function OrderSummary({
-  calcSubtotal,
-  calcVAT,
-  calcTotal,
-  clearCart,
-}) {
+// Import components
+import PrimaryButton from "../PrimaryButton";
+// Import styles
+import { StyledOrderSummary } from "./styles";
+
+const OrderSummary = ({ calcSubtotal, calcVAT, calcTotal, clearCart }) => {
   return (
     <StyledOrderSummary>
       <h3>Order summary</h3>
@@ -31,4 +30,6 @@ export default function OrderSummary({
       <PrimaryButton onClick={() => clearCart()} text={"Clear cart"} />
     </StyledOrderSummary>
   );
-}
+};
+
+export default OrderSummary;

@@ -1,24 +1,24 @@
+// Import necessary dependencies
 import React, { useState, useEffect } from "react";
-import { StyledSearchBar } from "./styles";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useProductsStore } from "../../../utils/create";
 import { shallow } from "zustand/shallow";
+
+// Import styles
+import { StyledSearchBar } from "./styles";
+
+// Import utils
+import { useProductsStore } from "../../../utils/create";
 import 'material-symbols';
 
 
 export default function SearchBar() {
   const [userInput, setUserInput] = useState("");
-
   const [suggestions, setSuggestions] = useState([]);
-
   const { pathname } = useLocation();
-
   const navigate = useNavigate();
 
   const { availableProducts } = useProductsStore(
-    (state) => ({
-      availableProducts: state.availableProducts,
-    }),
+    state => ({ availableProducts: state.availableProducts }),
     shallow
   );
 
@@ -32,13 +32,11 @@ export default function SearchBar() {
     setUserInput(query);
 
     if (query.length > 2) {
-      const filteredSuggestions = availableProducts.filter((product) =>
-        product.title.toLowerCase().includes(query)
+      const filteredSuggestions = availableProducts.filter(
+        product => product.title.toLowerCase().includes(query)
       );
       setSuggestions(filteredSuggestions);
-    }
-
-    if (query.length === 0) {
+    } else {
       setSuggestions([]);
     }
   }
@@ -68,9 +66,8 @@ export default function SearchBar() {
 
   function goToPage() {
     const chosenSuggestion = suggestions[selected];
-    chosenSuggestion
-      ? navigate(`/src/pages/Product/${chosenSuggestion.id}`)
-      : navigate(`/src/pages/SearchResults/${userInput}`);
+    const pageUrl = chosenSuggestion ? `/src/pages/Product/${chosenSuggestion.id}` : `/src/pages/SearchResults/${userInput}`;
+    navigate(pageUrl);
   }
 
   function navigateSuggestions(direction, target) {
@@ -79,26 +76,32 @@ export default function SearchBar() {
       selected = newSelected;
       target.value = suggestions[selected].title;
       const selectedSuggestion = suggestions[selected].id;
-      suggestions.forEach((suggestion) => {
+      suggestions.forEach(suggestion => {
         const li = document.getElementById(suggestion.id);
-        suggestion.id === selectedSuggestion
-          ? li.classList.add("selected")
-          : li.classList.remove("selected");
+        if (li) {
+          if (suggestion.id === selectedSuggestion) {
+            li.classList.add("selected");
+          } else {
+            li.classList.remove("selected");
+          }
+        }
       });
     }
   }
 
   function removeStyles() {
-    suggestions.forEach((suggestion) => {
+    suggestions.forEach(suggestion => {
       const li = document.getElementById(suggestion.id);
-      li.classList.remove("selected");
+      if (li) {
+        li.classList.remove("selected");
+      }
     });
   }
 
   return (
     <StyledSearchBar>
       <div className="input-wrapper">
-        <label htmlFor="search-bar"></label>
+        <label htmlFor="search-bar" />
         <span className="material-symbols-rounded">search</span>
         <input
           type="text"
@@ -110,13 +113,11 @@ export default function SearchBar() {
         />
       </div>
       <ul>
-        {suggestions.map((item) => {
-          return (
-            <li key={item.id} id={item.id}>
-              <Link to={`/src/pages/Product/${item.id}`}>{item.title}</Link>
-            </li>
-          );
-        })}
+        {suggestions.map(item => (
+          <li key={item.id} id={item.id}>
+            <Link to={`/src/pages/Product/${item.id}`}>{item.title}</Link>
+          </li>
+        ))}
       </ul>
     </StyledSearchBar>
   );

@@ -1,7 +1,13 @@
+// Import necessary dependencies
 import React, { useEffect } from "react";
-import { StyledPage } from "../pageStyles";
+
+// Import components
 import ProductCard from "../../components/ProductCard";
+
+// Import utils
 import filterByTags from "../../utils/filter";
+// Import pages
+import { StyledPage } from "../pageStyles";
 
 export default function Electronics({ products }) {
   useEffect(() => {

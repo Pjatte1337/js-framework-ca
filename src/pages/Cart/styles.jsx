@@ -22,6 +22,12 @@ h1 {
   flex: 0 0 65%;
 }
 
+a {
+  font-weight: bold;
+  font-style: italic;
+  color: ${({ theme }) => theme.color.highlight};
+}
+
 /* Media query for smaller screens */
 @media (max-width: ${({ theme }) => theme.break.medium}) {
   .purchase {
