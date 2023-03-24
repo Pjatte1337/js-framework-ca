@@ -1,7 +1,14 @@
+// Import necessary dependencies
 import React, { useEffect } from "react";
-import { StyledPage } from "../pageStyles";
+
+// Import components
 import ProductCard from "../../components/ProductCard";
+
+// Import utils
 import filterByTags from "../../utils/filter";
+
+// Import page styles
+import { StyledPage } from "../pageStyles";
 
 export default function Beauty({ products }) {
   useEffect(() => {
@@ -9,24 +16,22 @@ export default function Beauty({ products }) {
   }, []);
 
   const beautyTags = ["beauty", "perfume", "shampoo"];
-  const beauty = filterByTags(products, beautyTags);
+  const beautyProducts = filterByTags(products, beautyTags);
 
   return (
     <StyledPage>
       <h1>Beauty</h1>
-      {beauty.map((item) => {
-        return (
-          <ProductCard
-            key={item.id}
-            id={item.id}
-            imageUrl={item.imageUrl}
-            title={item.title}
-            price={item.price}
-            discountedPrice={item.discountedPrice}
-            description={item.description}
-          />
-        );
-      })}
+      {beautyProducts.map((product) => (
+        <ProductCard
+          key={product.id}
+          id={product.id}
+          imageUrl={product.imageUrl}
+          title={product.title}
+          price={product.price}
+          discountedPrice={product.discountedPrice}
+          description={product.description}
+        />
+      ))}
     </StyledPage>
   );
 }

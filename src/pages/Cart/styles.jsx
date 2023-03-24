@@ -10,14 +10,14 @@ export const StyledCartPage = styled.main`
   flex-wrap: wrap;
   gap: 2rem;
 
-/* Style for h1 element */
+// Style for h1 element
 h1 {
   flex: 100%;
   text-align: center;
   text-decoration: underline;
 }
 
-/* Style for .purchase element */
+// Style for .purchase element
   .purchase {
   flex: 0 0 65%;
 }

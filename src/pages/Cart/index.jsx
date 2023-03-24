@@ -13,6 +13,7 @@ import { StyledCartPage } from "./styles";
 import CartItem from "../../components/CartItem";
 import OrderSummary from "../../components/OrderSummary";
 
+
 // Define the Cart component
 export default function Cart() {
   // Set the document title on mount
@@ -64,7 +65,7 @@ export default function Cart() {
         </>
       ) : (
         <div>
-          <div>Your shopping cart is empty. <Link to={`/`}>Go shopping</Link></div>
+          <h2>Your shopping cart is empty. <Link to={`/`}>Go shopping</Link></h2>
         </div>
       )}
     </StyledCartPage>

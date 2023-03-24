@@ -1,5 +1,5 @@
+// Import styles
 import styled from "styled-components";
-
 
 export const StyledPage = styled.div`
   margin: 4rem 0;
@@ -8,9 +8,10 @@ export const StyledPage = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+
   h1 {
     flex: 100%;
     text-align: center;
-    text-decoration:underline;
+    text-decoration: underline;
   }
 `;

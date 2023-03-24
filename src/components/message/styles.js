@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledFeedback = styled.div`
+export const StyledMessages = styled.div`
   text-align: center;
   h1 {
     text-transform: uppercase;

@@ -2,17 +2,17 @@
 import { useLocation, Link } from "react-router-dom";
 
 // Import styles
-import { StyledFeedback } from "./styles";
+import { StyledMessages } from "./styles";
 
-export default function Feedback({ title, message }) {
+export default function Message({ title, message }) {
   const { pathname } = useLocation();
 
   return (
-    <StyledFeedback>
+    <StyledMessages>
       <h1>{title}</h1>
       <p>{message}</p>
       {(pathname === "/src/pages/CheckoutSuccess" ||
         pathname === "/src/pages/Cart") && <Link to={"/"}>Go shopping</Link>}
-    </StyledFeedback>
+    </StyledMessages>
   );
 }
