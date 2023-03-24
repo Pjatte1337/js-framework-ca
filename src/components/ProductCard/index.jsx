@@ -37,7 +37,7 @@ export default function ProductCard({
               : "promo-container-hidden"
           }
         >
-          <p className="old-price">{price !== discountedPrice ? price : ""}</p>
+          <p className="old-price">{price !== discountedPrice ? price : ""} NOK</p>
           <p className="discount">
             {price !== discountedPrice &&
               Math.trunc(((price - discountedPrice) / discountedPrice) * 100)}
