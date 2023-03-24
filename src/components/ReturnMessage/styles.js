@@ -8,6 +8,7 @@ export const StyledMessages = styled.div`
   }
   p {
     margin-bottom: 5rem;
+    color: ${({ theme }) => theme.color.support};
   }
   a {
     text-decoration: none;
@@ -17,10 +18,10 @@ export const StyledMessages = styled.div`
     padding: 0.5rem 1rem;
     text-align: center;
     &:hover {
-      color: ${({ theme }) => theme.color.hover};
+      color: ${({ theme }) => theme.color.support};
       background-color: ${({ theme }) => theme.color.neutral};
       border: ${({ theme }) =>
-      `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
+      `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
     }
   }
 `;

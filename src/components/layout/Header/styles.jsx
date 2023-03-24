@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   display: grid;
   grid-template-columns: 2fr 1fr 4rem;
-  padding: 1rem;
   .menu {
     display: none;
   }
@@ -33,7 +32,7 @@ export const StyledHeader = styled.header`
   input {
     width: 100%;
     height: 100%;
-    border: none;
+    border-radius: 10px;
     font-size: 1.1rem;
     &:focus {
       outline: none;
@@ -61,7 +60,7 @@ export const StyledHeader = styled.header`
       width: 2.5rem;
       border: none;
       color: ${({ theme }) => theme.color.highlight};
-      background-color: ${({ theme }) => theme.color.neutral};
+      background-color: ${({ theme }) => theme.color.background};
       cursor: pointer;
     }
 `;

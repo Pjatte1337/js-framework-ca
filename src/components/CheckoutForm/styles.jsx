@@ -6,6 +6,9 @@ export const StyledCheckoutForm = styled.form`
   flex-direction: column;
   border: ${({ theme }) =>
     `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
+  box-shadow: 0px 0px 9px 2px rgba(235, 235, 20, 0.63);
+  webkit-box-shadow: 0px 0px 9px 2px rgba(235, 235, 20, 0.63);
+  -moz-box-shadow: 0px 0px 9px 2px rgba(235, 235, 20, 0.63);
   width: 60rem;
   padding: 1rem;
   margin-left: 1rem;
@@ -16,7 +19,8 @@ export const StyledCheckoutForm = styled.form`
     font-weight: 900;
   }
 
-  input, select {
+  input,
+  select {
     display: block;
     width: 100%;
     height: 2rem;
@@ -44,8 +48,10 @@ export const StyledCheckoutForm = styled.form`
   .error-message {
     font-size: 1rem;
     margin: 0 0 1.5rem;
-    color: red;
+    color:${({ theme }) => theme.color.support};
+    font-weight: bold;
   }
+  
 
   .button-container {
     width: 100%;

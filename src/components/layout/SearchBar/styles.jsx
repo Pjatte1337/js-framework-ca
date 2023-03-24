@@ -28,11 +28,12 @@ export const StyledSearchBar = styled.div`
       padding: 0.5rem 1rem;
       display: block;
       text-decoration: none;
+      font-weight: bold;
       color: ${({ theme }) => theme.color.neutral};
       background-color: ${({ theme }) => theme.color.support};
       &:hover {
-        background-color: ${({ theme }) => theme.color.highlight};
-        color: ${({ theme }) => theme.color.neutral};
+        background-color: ${({ theme }) => theme.color.neutral};
+        color: ${({ theme }) => theme.color.support};
         cursor: pointer;
       }
     }
@@ -40,7 +41,7 @@ export const StyledSearchBar = styled.div`
   .selected {
     background-color: ${({ theme }) => theme.color.highlight};
     a {
-      color: ${({ theme }) => theme.color.neutral};
+      color: ${({ theme }) => theme.color.support};
     }
   }
   @media (max-width: ${({ theme }) => theme.break.medium}) {

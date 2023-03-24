@@ -4,6 +4,9 @@ import styled from "styled-components";
 export const StyledOrderSummary = styled.div`
   border: ${({ theme }) =>
     `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
+  box-shadow: 0px 0px 9px 2px rgba(235,235,20,0.63);
+  webkit-box-shadow: 0px 0px 9px 2px rgba(235,235,20,0.63);
+  -moz-box-shadow: 0px 0px 9px 2px rgba(235,235,20,0.63);
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -33,10 +36,10 @@ export const StyledOrderSummary = styled.div`
     padding: 0.5rem 0;
     text-align: center;
     &:hover {
-      color: ${({ theme }) => theme.color.hover};
+      color: ${({ theme }) => theme.color.support};
       background-color: ${({ theme }) => theme.color.neutral};
       border: ${({ theme }) =>
-      `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
+      `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
     }
   }
   @media (max-width: ${({ theme }) => theme.break.medium}) {

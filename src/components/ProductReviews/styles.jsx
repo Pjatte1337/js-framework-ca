@@ -30,6 +30,7 @@ export const StyledProductReviews = styled.div`
     }
   }
 
+
   @media (max-width: ${({ theme }) => theme.break.small}) {
     h3,
     .reviews-container h4 {

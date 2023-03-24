@@ -15,6 +15,7 @@ export const StyledPage = styled.div`
     text-decoration: underline;
   }
 
+
   button,
   a {
     font-weight: bold;
