@@ -1,36 +1,35 @@
-import { StyledContactForm } from "./styles";
-import PrimaryButton from "../PrimaryButton";
+// Import necessary dependencies
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const schema = yup
-  .object({
-    fullName: yup
-      .string()
-      .trim()
-      .matches(/^[a-zA-Z\s]*$/, "Must not contain any numbers or symbols")
-      .min(3, "Must be at least 3 characters long")
-      .required(),
-    subject: yup
-      .string()
-      .trim()
-      .min(3, "Must be at least 3 characters long")
+// Import components
+import PrimaryButton from "../PrimaryButton";
 
-      .required(),
-    email: yup
-      .string()
-      .matches(/\S+@\S+\.\S+/, "Must be a valid email address")
-      .required(),
-    body: yup
-      .string()
-      .trim()
-      .min(3, "Must be at least 3 characters long")
-      .max(5000, "Cannot be longer than 5000 characters")
-      .required(),
-  })
-  .required();
+// Import styles
+import { StyledContactForm } from "./styles";
+
+const schema = yup.object().shape({
+  fullName: yup
+    .string()
+    .trim()
+    .matches(/^[a-zA-Z\s]*$/, "Must not contain any numbers or symbols")
+    .min(3, "Must be at least 3 characters long")
+    .required(),
+  subject: yup
+    .string()
+    .trim()
+    .min(3, "Must be at least 3 characters long")
+    .required(),
+  email: yup.string().email("Must be a valid email address").required(),
+  body: yup
+    .string()
+    .trim()
+    .min(3, "Must be at least 3 characters long")
+    .max(5000, "Cannot be longer than 5000 characters")
+    .required(),
+});
 
 export default function ContactForm() {
   useEffect(() => {
@@ -43,57 +42,54 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  function handleSubmission(data) {
+  const onSubmit = (data) => {
     console.log(data);
-  }
+  };
 
   return (
-    <StyledContactForm onSubmit={handleSubmit(handleSubmission)}>
+    <StyledContactForm onSubmit={handleSubmit(onSubmit)}>
       <div className="form">
         <h2>Fill in</h2>
         <label htmlFor="fullName">Full name</label>
         <input
-          {...register("fullName", {
-            required: true,
-            minLength: 3,
-          })}
+          {...register("fullName")}
           name="fullName"
           placeholder="Full name"
         ></input>
-        <p className="error-message">{errors.fullName?.message}</p>
+        {errors.fullName && (
+          <p className="error-message">{errors.fullName.message}</p>
+        )}
 
         <label htmlFor="subject">Subject</label>
         <input
-          {...register("subject", {
-            required: true,
-            minLength: 3,
-          })}
+          {...register("subject")}
           name="subject"
           placeholder="Subject"
         ></input>
-        <p className="error-message">{errors.subject?.message}</p>
+        {errors.subject && (
+          <p className="error-message">{errors.subject.message}</p>
+        )}
 
         <label htmlFor="email">Email</label>
         <input
-          {...register("email", {
-            required: true,
-          })}
+          {...register("email")}
           type="email"
           name="email"
           placeholder="Email"
         ></input>
-        <p className="error-message">{errors.email?.message}</p>
+        {errors.email && (
+          <p className="error-message">{errors.email.message}</p>
+        )}
 
         <label htmlFor="body">Message</label>
         <textarea
-          {...register("body", {
-            required: true,
-            minLength: 3,
-          })}
+          {...register("body")}
           name="body"
           placeholder="Write your message here"
         ></textarea>
-        <p className="error-message">{errors.body?.message}</p>
+        {errors.body && (
+          <p className="error-message">{errors.body.message}</p>
+        )}
 
         <div className="button-container">
           <PrimaryButton text={"Submit"} />

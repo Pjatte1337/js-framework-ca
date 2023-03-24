@@ -1,5 +1,8 @@
-import { StyledFeedback } from "./styles";
+// Import dependencies
 import { useLocation, Link } from "react-router-dom";
+
+// Import styles
+import { StyledFeedback } from "./styles";
 
 export default function Feedback({ title, message }) {
   const { pathname } = useLocation();

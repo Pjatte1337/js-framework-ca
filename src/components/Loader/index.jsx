@@ -1,9 +1,12 @@
+// Import styles
 import { StyledLoader } from "./styles";
 
-export default function Loader() {
+const Loader = () => {
   return (
     <StyledLoader>
       <span className="loader"></span>
     </StyledLoader>
   );
 }
+
+export default Loader;

@@ -1,3 +1,4 @@
+// importing styles
 import styled from "styled-components";
 
 export const StyledContactForm = styled.form`
