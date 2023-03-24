@@ -40,11 +40,15 @@ export default function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset // clear out the form after submitted 
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = (data) => {
     console.log(data);
+    window.alert("Form submitted successfully!");
+    reset(); // clear out the form after submitted 
   };
+
 
   return (
     <StyledContactForm onSubmit={handleSubmit(onSubmit)}>
