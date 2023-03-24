@@ -24,7 +24,7 @@ h1 {
 
 a {
   font-weight: bold;
-  font-style: italic;
+  font-style: normal;
   color: ${({ theme }) => theme.color.highlight};
 }
 
