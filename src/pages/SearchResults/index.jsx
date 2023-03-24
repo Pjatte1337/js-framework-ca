@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ProductCard from "../../components/ProductCard";
 import { StyledPage } from "../pageStyles";
 import { url } from "../../utils/constants";
-import Message from "../../components/Message";
+import Message from "../../components/ReturnMessage";
 import Loader from "../../components/Loader";
 
 export default function SearchResults() {

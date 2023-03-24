@@ -4,7 +4,7 @@ import ProductCard from "../../components/ProductCard";
 import ProductReviews from "../../components/ProductReviews";
 import { useParams } from "react-router-dom";
 import { url } from "../../utils/constants";
-import Message from "../../components/Message";
+import Message from "../../components/ReturnMessage";
 import Loader from "../../components/Loader";
 
 export default function Product() {

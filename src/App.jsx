@@ -14,7 +14,7 @@ import SearchResults from "./pages/SearchResults";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
-import Message from "./components/Message";
+import ReturnMessage from "./components/ReturnMessage";
 import Loader from "./components/Loader";
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
   }
 
   if (error) {
-    return <Message title={"An error occurred"} message={error} />;
+    return <ReturnMessage title={"An error occurred"} message={error} />;
   }
 
   return (

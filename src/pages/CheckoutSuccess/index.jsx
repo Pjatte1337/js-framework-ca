@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { StyledPage } from "../pageStyles";
-import Message from "../../components/Message";
+import Message from "../../components/ReturnMessage";
 
 export default function CheckoutSuccess() {
   useEffect(() => {
