@@ -1,8 +1,6 @@
 // Import necessary dependencies
 import { Link } from "react-router-dom";
 
-// Import components
-import PrimaryButton from "../PrimaryButton";
 // Import styles
 import { StyledOrderSummary } from "./styles";
 
@@ -27,7 +25,6 @@ const OrderSummary = ({ calcSubtotal, calcVAT, calcTotal, clearCart }) => {
         <p className="total">{calcTotal()} NOK</p>
       </div>
       <Link to={"/src/pages/Checkout"}>Checkout</Link>
-      <PrimaryButton onClick={() => clearCart()} text={"Clear cart"} />
     </StyledOrderSummary>
   );
 };
