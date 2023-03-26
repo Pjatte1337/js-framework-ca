@@ -8,8 +8,8 @@ export const StyledLoader = styled.div`
   height: 100vh;
 
   .loader {
-    color: #ffffff;
-    font-size: 45px;
+    color: ${({ theme }) => theme.color.highlight};
+    font-size: 100px;
     text-indent: -9999em;
     overflow: hidden;
     width: 1em;

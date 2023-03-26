@@ -1,11 +1,17 @@
+// Import necessary dependencies
 import React, { useState, useEffect } from "react";
-import { StyledPage } from "../pageStyles";
+import { useParams } from "react-router-dom";
+// Import components
 import ProductCard from "../../components/ProductCard";
 import ProductReviews from "../../components/ProductReviews";
-import { useParams } from "react-router-dom";
-import { url } from "../../utils/constants";
 import Message from "../../components/ReturnMessage";
 import Loader from "../../components/Loader";
+
+// Import utils
+import { url } from "../../utils/constants";
+
+// Import styles
+import { StyledPage } from "../pageStyles";
 
 export default function Product() {
   const [data, setData] = useState(null);

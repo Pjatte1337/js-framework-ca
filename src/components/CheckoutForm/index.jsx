@@ -113,7 +113,7 @@ export default function CheckoutForm() {
         ></input>
         <p className="error-message">{errors.address?.message}</p>
 
-        <div className="small-field">
+        <div className="s-field">
           <div>
             <label htmlFor="city">City</label>
             <input
@@ -189,7 +189,7 @@ export default function CheckoutForm() {
         ></input>
         <p className="error-message">{errors.cardName?.message}</p>
 
-        <div className="small-field">
+        <div className="s-field">
           <div>
             <label htmlFor="month">Expiry month (MM)</label>
             <input

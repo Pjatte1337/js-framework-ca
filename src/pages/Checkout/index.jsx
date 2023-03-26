@@ -6,15 +6,15 @@ import { StyledCheckoutPage } from "./styles";
 import CheckoutForm from "../../components/CheckoutForm";
 
 export default function Checkout() {
-// Set the document title on component mount
+  // Set the document title on component mount
   useEffect(() => {
-   document.title = "StoreTown | Checkout";
+    document.title = "StoreTown | Checkout";
   }, []);
 
-return (
-  <StyledCheckoutPage>
-    <h1>Check Out</h1>
-    <CheckoutForm />
-  </StyledCheckoutPage>
-);
+  return (
+    <StyledCheckoutPage>
+      <h1>Check Out</h1>
+      <CheckoutForm />
+    </StyledCheckoutPage>
+  );
 }

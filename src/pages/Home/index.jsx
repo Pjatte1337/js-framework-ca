@@ -1,6 +1,11 @@
+// Import necessary dependencies
 import React, { useEffect } from "react";
-import { StyledPage } from "../pageStyles";
+
+// Import components
 import ProductCard from "../../components/ProductCard";
+
+// Import styles
+import { StyledPage } from "../pageStyles";
 
 function Home({ products }) {
   useEffect(() => {

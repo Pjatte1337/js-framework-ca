@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 export const StyledPage = styled.div`
-  margin: 4rem 0;
+  margin: 2rem 0;
   padding: 0 1rem;
   display: flex;
   justify-content: center;
@@ -13,5 +13,10 @@ export const StyledPage = styled.div`
     flex: 100%;
     text-align: center;
     text-decoration: underline;
+  }
+
+  button,
+  a {
+    font-weight: bold;
   }
 `;

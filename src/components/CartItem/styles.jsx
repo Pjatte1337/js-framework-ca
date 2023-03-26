@@ -7,32 +7,30 @@ export const StyledCartItem = styled.div`
   justify-content: space-between;
   border: ${({ theme }) =>
     `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
+  box-shadow: 0px 0px 9px 2px rgba(235,235,20,0.63);
+  webkit-box-shadow: 0px 0px 9px 2px rgba(235,235,20,0.63);
+  -moz-box-shadow: 0px 0px 9px 2px rgba(235,235,20,0.63);
   padding: 1rem;
   margin: 2rem 0;
 
-  // Defining the style for the product info section
   .product-info {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
   }
 
-  // Defining the style for the product image
   img {
     width: 8rem;
   }
 
-  // Defining the style for the product title
   h2 {
     margin: 0;
   }
 
-  // Defining the style for the product price
   .price {
     margin: 0.5rem 0 1rem;
   }
 
-  // Defining the style for the quantity section
   .quantity {
     display: flex;
     align-items: center;
@@ -40,7 +38,6 @@ export const StyledCartItem = styled.div`
     margin: 2rem 0;
   }
 
-  // Defining the style for the button component
   button {
     display: flex;
     border: none;
@@ -49,11 +46,12 @@ export const StyledCartItem = styled.div`
     border-radius: 4px;
     cursor: pointer;
     
-    // Defining the style for the button on hover
     &:hover {
       opacity: 0.9;
       background-color: ${({ theme }) => theme.color.neutral};
-      color: ${({ theme }) => theme.color.hover};
+      color: ${({ theme }) => theme.color.support};
+      border: ${({ theme }) =>
+      `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
     }
   }
 `;

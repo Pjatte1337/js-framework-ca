@@ -1,10 +1,17 @@
+// Import necessary dependencies
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProductCard from "../../components/ProductCard";
-import { StyledPage } from "../pageStyles";
-import { url } from "../../utils/constants";
+
+// Import components
 import Message from "../../components/ReturnMessage";
 import Loader from "../../components/Loader";
+import ProductCard from "../../components/ProductCard";
+
+// Import utils
+import { url } from "../../utils/constants";
+
+// Import styles
+import { StyledPage } from "../pageStyles";
 
 export default function SearchResults() {
   const [data, setData] = useState(null);

@@ -1,7 +1,13 @@
+// Import necessary dependencies
 import { Link } from "react-router-dom";
-import { useProductsStore } from "../../../utils/create";
 import { shallow } from "zustand/shallow";
+
+// Import utils
+import { useProductsStore } from "../../../utils/create";
+// Import styles
+
 import { StyledCart } from "./styles";
+// Import pages
 
 export default function Cart() {
   const { availableProducts } = useProductsStore(
