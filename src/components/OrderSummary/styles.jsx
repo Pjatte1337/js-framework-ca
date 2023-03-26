@@ -28,6 +28,7 @@ export const StyledOrderSummary = styled.div`
     .total {
       font-weight: 700;
       margin: 1rem 0;
+      color: ${({ theme }) => theme.color.highlight};
     }
   }
 
