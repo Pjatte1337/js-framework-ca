@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 body {
     background-color: ${({ theme }) => theme.color.background};
     margin: 0;
-    font-family: 'Droid Sans', sans-serif;
+    font-family: sans-serif;
     color: ${({ theme }) => theme.color.highlight};
 }
 
