@@ -18,7 +18,7 @@ export const StyledOrderSummary = styled.div`
     margin: 0 0 1rem;
   }
 
-  .price-summary {
+  .summary {
     display: flex;
     justify-content: space-between;
     color: ${({ theme }) => theme.color.support};

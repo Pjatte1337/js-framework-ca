@@ -8,15 +8,15 @@ const OrderSummary = ({ calcSubtotal, calcVAT, calcTotal, clearCart }) => {
   return (
     <StyledOrderSummary>
       <h3>Order summary</h3>
-      <div className="price-summary">
+      <div className="summary">
         <p>Product cost:</p>
         <p>{calcSubtotal()} NOK</p>
       </div>
-      <div className="price-summary">
+      <div className="summary">
         <p>VAT 25%:</p>
         <p>{calcVAT()} NOK</p>
       </div>
-      <div className="price-summary">
+      <div className="summary">
         <p className="total">Total:</p>
         <p className="total">{calcTotal()} NOK</p>
       </div>

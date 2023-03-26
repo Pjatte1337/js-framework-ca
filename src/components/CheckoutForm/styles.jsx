@@ -31,7 +31,7 @@ export const StyledCheckoutForm = styled.form`
     }
   }
 
-  .small-field {
+  .s-field {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
