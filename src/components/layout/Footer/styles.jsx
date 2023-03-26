@@ -6,12 +6,14 @@ export const StyledFooter = styled.footer`
     `${theme.border.thickness} ${theme.border.type} ${theme.color.highlight}`};
   text-align: center;
   padding-bottom: 1rem;
+
   ul {
     display: flex;
     list-style: none;
     justify-content: center;
     gap: 1rem;
   }
+  
   a {
     color: ${({ theme }) => theme.color.highlight};
   }

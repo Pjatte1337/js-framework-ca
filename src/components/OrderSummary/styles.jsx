@@ -13,9 +13,11 @@ export const StyledOrderSummary = styled.div`
   margin: 2rem 0;
   height: fit-content;
   flex: 0 0 30%;
+
   h3 {
     margin: 0 0 1rem;
   }
+
   .price-summary {
     display: flex;
     justify-content: space-between;
@@ -28,20 +30,22 @@ export const StyledOrderSummary = styled.div`
       margin: 1rem 0;
     }
   }
+
   a {
     text-decoration: none;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.color.neutral};
     background-color: ${({ theme }) => theme.color.highlight};
+    color: ${({ theme }) => theme.color.neutral};
     padding: 0.5rem 0;
     text-align: center;
     &:hover {
-      color: ${({ theme }) => theme.color.support};
       background-color: ${({ theme }) => theme.color.neutral};
+      color: ${({ theme }) => theme.color.support};
       border: ${({ theme }) =>
       `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
     }
   }
+  
   @media (max-width: ${({ theme }) => theme.break.medium}) {
     flex: 0 0 100%;
   }

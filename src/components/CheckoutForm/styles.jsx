@@ -52,7 +52,6 @@ export const StyledCheckoutForm = styled.form`
     font-weight: bold;
   }
   
-
   .button-container {
     width: 100%;
 

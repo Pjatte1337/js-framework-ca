@@ -14,6 +14,7 @@ export const StyledProductCard = styled.div`
   border-radius: 10px;
   width: 17rem;
   padding: 1rem;
+
   img {
     max-width: 100%;
     height: 400px;
@@ -52,13 +53,13 @@ export const StyledProductCard = styled.div`
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.color.neutral};
     background-color: ${({ theme }) => theme.color.highlight};
+    color: ${({ theme }) => theme.color.neutral};
     padding: 0.5rem 0;
     text-align: center;
     &:hover {
-      color: ${({ theme }) => theme.color.support};
       background-color: ${({ theme }) => theme.color.neutral};
+      color: ${({ theme }) => theme.color.support};
       border: ${({ theme }) =>
       `${theme.border.thickness} ${theme.border.type} ${theme.color.support}`};
     }
