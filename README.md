@@ -1,25 +1,36 @@
-# Your project title
+# Noroff JavaScript Frameworks
+## StoreTown eCom store
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/5e279e12-7fb8-4008-aa46-db90a29d56d3/deploy-status)](https://app.netlify.com/sites/hilarious-toffee-e3225d/deploys)
+- [Hosted application demo link](https://hilarious-toffee-e3225d.netlify.app/)
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://github.com/Pjatte1337/js-framework-ca/blob/main/src/assets/project-img.png)
 
-A simple overview of the use/purpose of the project.
 
 ## Description
+This is my JavaScript Framework Assignment @ [Noroff - School of technology and digital media](https://www.noroff.no/).
+The website is an eCom store using Noroff's live API. On the StoreTown eCom store you can buy product in different category.
 
-Add a more detailed description of what your project entails and set out to do.
+This project has:
+- Homepage
+- Individual product page
+- Cart page
+- Checkout success page
 
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
+Some of the criteria:
+- Fetch the list of products on the Homepage and store this as a state.
+- Clicking on the Cart Icon component will take the user to the CheckoutPage page.
+- The CheckoutPage must list all of the products in the cart, show a total at the bottom and a Checkout button.
+- console.log the data from the form once validation requirements are met.
+- Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart.
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - [React.js](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com)
+- [StyledComponents](https://styled-components.com/)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- CSS Modules
+- Noroff API
 
 ## Getting Started
 
@@ -30,7 +41,7 @@ This is where you list how to get the project started. It typically just include
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git@github.com:Pjatte1337/js-framework-ca.git
 ```
 
 2. Install the dependencies:
@@ -51,20 +62,15 @@ npm run start
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+If you have a suggestion that would make this better, please fork the repo and create a pull request.
+
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+[My LinkedIn page](https://www.linkedin.com/in/joakim-vanebo-93a64562/)
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+[Noroff - School of technology and digital media](https://www.noroff.no/)
+
