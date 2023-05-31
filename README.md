@@ -74,3 +74,6 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 [Noroff - School of technology and digital media](https://www.noroff.no/)
 
+## Author
+
+[Joakim Vanebo](https://github.com/Pjatte1337) | Pjatte1337
